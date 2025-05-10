@@ -1,0 +1,14 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ゴルフコース検索App</title>
+  </head>
+  <body>
+    <h1>ゴルフ場を入力してください</h1>
+    <form action="{% url 'searchcourse:select' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="検索">
+    </form>
+  </body>
+</html>
